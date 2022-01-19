@@ -11,21 +11,6 @@ def cambio_username():
 def cambio_concepto():
         st.session_state.concepto = False
 
-def oauth_login():
-	''' 
-	Acceso a API twitter
-	'''
-	consumer_key = 'Ugc8VYscp7QPq8vY0lG16Y7mT'
-	consumer_secret = '6nChNdFbrBUsQQ08Z21Oj0buKY9p5v54PSvvXNa92tpeaMcBeM'
-	access_token = '1402045352681754626-TxiqsgZF3vsoEi23SBZBefZkJY1Hm8'
-	access_token_secret = '9SIBn7cto0WnW7L3e77ewBKDqZsBmRGDLPimmMrgFE7F5'
-	
-	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-	auth.set_access_token(access_token, access_token_secret)
-	api = tweepy.API(auth)
-
-	return api
-
 def extrae_guarda_tuits(acceso, listaConceptos, cuantos):
 	'''
 	Busca tuits con los username
