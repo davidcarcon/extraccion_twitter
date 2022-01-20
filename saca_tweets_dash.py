@@ -1,3 +1,4 @@
+from auth import oauth_login
 import streamlit as st
 import pandas as pd
 import tweepy
