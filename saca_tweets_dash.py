@@ -15,10 +15,10 @@ def oauth_login():
         ''' 
         Acceso a API twitter
         '''
-        consumer_key = st.secret['consumer_key']
-        consumer_secret = st.secret['consumer_secret']
-        access_token = st.secret['access_token']
-        access_token_secret = st.secret['access_token_secret']
+        consumer_key = st.secrets['consumer_key']
+        consumer_secret = st.secrets['consumer_secret']
+        access_token = st.secrets['access_token']
+        access_token_secret = st.secrets['access_token_secret']
         
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
         auth.set_access_token(access_token, access_token_secret)
